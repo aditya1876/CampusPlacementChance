@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:rgba(231, 37, 37, 0.473)">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predict Campus placement salary offering</h2>
+            <h3>Enter the following details about yourself...</h3>
+            <div>
+                <h4><b>SSC Detials</b></h4>
+                <label for="ssc_board">SSC board</label>
+                <select name="ssc_board" id="ssc_board">
+                    <option value="Central">Central</option>
+                    <option value="Others">Others</option>
+                </select>
+                <h4>SSC percentage:</h>
+                <input id="ssc_p" name="ssc_percentage" type="number ">
+            </div>
+            <br>
+            <div>
+                <h4><b>HSC Detials</b></h4>
+                <label for="hsc_board">HSC board</label>
+                <select name="hsc_board" id="hsc_board">
+                    <option value="Central">Central</option>
+                    <option value="Others">Others</option>
+                </select>
+                <br>
+                <label for="hsc_specialization">HSC Specilization</label>
+                <select name="hsc_specilization" id="hsc_s">
+                    <option value="Commerce">Commerce</option>
+                    <option value="Science">Science</option>
+                    <option value="Arts">Arts</option>
+                </select>
+                <h4>HSC percentage:</h>
+                <input id="hsc_p" name="hsc_percentage" type="number ">
+            </div>
+            <br>
+            <div>
+                <h4><b>Graduation Detials</b></h4>
+                <label for="degree_specialization">Degree Specilization</label>
+                <select name="degree_specialization" id="degree_t">
+                    <option value="Sci&Tech">Sci&Tech</option>
+                    <option value="Comm&Mgmt">Comm&Mgmt</option>
+                    <option value="Others">Others</option>
+                </select>
+                <h4>Degree percentage:</h>
+                <input id="degree_p" name="degree_percentage" type="number ">
+            </div>
+            <br>
+            <div>
+                <h4><b>MBA Detials</b></h4>
+                <label for="mba_specilization">MBA Specilization</label>
+                <select name="mba_specilization" id="specialization">
+                    <option value="Mkt&HR">Mkt&HR</option>
+                    <option value="Mkt&Fin">Mkt&Fin</option>
+                </select>
+                <h4>MBA percentage:</h>
+                <input id="mba_p" name="mba_percentage" type="number ">
+            </div>         
+            <br>
+            <div>
+                <h4><b>Employability Detials</b></h4>
+                <label for="work_exp">Work Experience</label>
+                <select name="work_experience" id="workex">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+                <h4>Employability Test Percentage:</h>
+                <input id="etest_p" name="employabilityTest_percentage" type="number ">
+            </div>
+            <button id="make_predictions" type="submit ">Predict Placement</button>
+        </form>
+
+        <h3>{{ prediction_placement }}</h3>
+
+    </div>
+
+    <style>
+        body {
+            background-color: rgba(90, 120, 153, 0.658);
+            text-align: center;
+            padding: 0px;
+        }   
+        
+    </style>
+</body>
+
+</html>
