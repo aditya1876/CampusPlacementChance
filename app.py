@@ -62,7 +62,7 @@ def predict():
             degree_t_CommMgmt=1
             degree_t_SciTech=0
             degree_t_Others=0
-        elif(degree_t='Sci&Tech'):
+        elif(degree_t=='Sci&Tech'):
             degree_t_CommMgmt=0
             degree_t_SciTech=1
             degree_t_Others=0
